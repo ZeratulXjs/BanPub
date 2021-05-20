@@ -3,7 +3,14 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_restplus import Api, Resource, fields
+import flask.scaffold
+flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
+try:
+    from flask_restplus import Resource, Api, fields
+except ImportError:
+    import werkzeug
+    werkzeug.cached_property = werkzeug.utils.cached_property
+    from flask_restplus import Resource, Api, fields
 
 
 ####################################################################################################
@@ -189,4 +196,4 @@ class Crops(Resource):
         return {'message' : 'User deleted'}
         
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(bug=True)

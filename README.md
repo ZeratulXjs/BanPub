@@ -8,7 +8,10 @@ This an API written in python using the Flask-RESTPlus framework. It uses Postgr
 
 Users can submit and view submitted cultivar entries in the database (CRUD functionality).
 
-Development was developed using Ubuntu 18.04 using Python 3.6.
+Development was on Ubuntu 18.04 using Python 3.6.
+Updates on Windows 10 using Python 3.6
+
+yoooo
 
 The API uses the following core dependencies/modules;
 
@@ -21,7 +24,7 @@ PostgreSQL
 
 ```
 
-The complete list of depencies and their versions can be found in the `requirements.txt` file.
+The complete list of dependencies and their versions can be found in the `requirements.txt` file.
 
 ## Running the API
 
@@ -32,7 +35,7 @@ The complete list of depencies and their versions can be found in the `requireme
 2; Install PostgreSQL. Add a new system user and create the Postgres database that the API will use;
     You can change the password to whatever you like, then change it in the banApi.py app too.
 
-```linux
+```
 user@acc:~/BanPub$ sudo apt -y install postgresql postgresql-contrib
 
 user@acc:~/BanPub$ sudo -i -u postgres psql
